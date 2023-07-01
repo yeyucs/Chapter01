@@ -59,7 +59,7 @@ public class ChapterTestApplication {
         }
         System.out.println(dbConnector.config());
 
-        Comment comment = commentMapper.findById(3);
+        Comment comment = commentMapper.findById(5);
         System.out.println("单元测试返回的Comment表的数据-----"+comment);
 
         Comment comment1 = new Comment();
@@ -78,5 +78,14 @@ public class ChapterTestApplication {
 
         commentMapper.deleteComment(6);
         System.out.println("删除成功");
+
+        Comment comment3 = commentMapper.findByauthor("张三");
+        System.out.println("单元测试返回的Comment表的数据-----"+comment3);
+
+        Comment comment5 = new Comment();
+        comment5.setAuthor("钢琴");
+        comment5.setContent("小刚");
+        commentMapper.updateComment(comment5);
+        System.out.println("更新成功----"+comment5);
     }
 }

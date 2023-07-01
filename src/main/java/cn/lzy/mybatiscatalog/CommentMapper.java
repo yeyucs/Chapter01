@@ -16,6 +16,12 @@ public interface CommentMapper {
 
     @Delete("DELETE FROM t_comment WHERE id=#{id}")
     public int deleteComment(Integer id);
+
+    @Select("SELECT * FROM t_comment WHERE author=#{id}")
+    public Comment findByauthor(String author);
+
+    @Update("UPDATE t_comment SET content=#{content} WHERE author=#{author}")
+    public int updateAuthor(Comment comment);
 }
 
 
