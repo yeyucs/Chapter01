@@ -1,5 +1,6 @@
 package cn.lzy.redis;
 
+import cn.lzy.configbean.Person;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.CrudRepository;

@@ -1,5 +1,8 @@
 package cn.lzy.redis;
 
+
+import cn.lzy.mybatiscatalog.redis.Address;
+import cn.lzy.mybatiscatalog.redis.Family;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.redis.core.RedisHash;
 import org.springframework.data.redis.core.index.Indexed;
