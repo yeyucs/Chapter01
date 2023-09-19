@@ -1,10 +1,5 @@
 package cn.lzy.web.file;
 
-/*
- * @author:韦盛彪
- * @creat: 2023-09-18  18:01
- */
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,6 +8,12 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.util.UUID;
+
+/**
+ * @author:韦盛彪
+ * @creat: 2023-09-19  09:30
+ */
+
 @Controller
 public class FileController {
     @GetMapping("/toUpload")
