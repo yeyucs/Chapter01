@@ -1,4 +1,4 @@
-package cn.lzy.redis;
+package cn.lzy.mybatiscatalog.redis;
 
 import org.springframework.data.redis.core.index.Indexed;
 

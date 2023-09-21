@@ -1,4 +1,5 @@
-package cn.lzy.redis;
+package cn.lzy.mybatiscatalog.redis;
+
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.redis.core.RedisHash;
