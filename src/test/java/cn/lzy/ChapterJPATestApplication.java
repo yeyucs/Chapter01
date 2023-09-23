@@ -60,6 +60,6 @@ public class ChapterJPATestApplication {
 
     @Test
     public void deleteComment() {
-         reppository.deleteById(2);
+         reppository.deleteById(1);
     }
 }
