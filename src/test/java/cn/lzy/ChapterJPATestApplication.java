@@ -2,7 +2,6 @@ package cn.lzy;
 
 import cn.lzy.mybatiscatalog.jpa.Discuss;
 import cn.lzy.mybatiscatalog.jpa.DiscussRepository;
-import cn.lzy.mybatiscatalog.jpa.DiscussReppository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
