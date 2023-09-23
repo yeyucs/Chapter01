@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>文件下载</title>
@@ -8,12 +8,12 @@
 <div style="margin-bottom: 10px">文件下载列表:</div>
 <table>
     <tr>
-        <td>bloglogo.jpg</td>
-        <td><a th:href="@{/download{filename='111.txt'}}">文件下载</a></td>
+        <td>111.txt</td>
+        <td><a th:href="@{/download(filename='111.txt')}">文件下载</a></td>
     </tr>
     <tr>
-        <td>Spring Boot 应用级开发教程.pdf</td>
-        <td><a th:href="@{/download{filename='富婆.png'}}">文件下载</a></td>
+        <td>富婆.png</td>
+        <td><a th:href="@{/download(filename='富婆.png')}">文件下载</a></td>
     </tr>
 </table>
 </body>
