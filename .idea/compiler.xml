@@ -6,12 +6,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Chapter03" />
+        <module name="Chapert03" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Chapter03" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Chapert03" options="-parameters" />
       <module name="Chapter03" options="-parameters" />
     </option>
   </component>
