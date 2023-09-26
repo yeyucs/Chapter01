@@ -1,6 +1,7 @@
 package cn.lzy.service;
 
 import cn.lzy.mybatiscatalog.domainjpa.Article;
+import cn.lzy.mybatiscatalog.domainjpa.ArticleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,10 +17,10 @@ import java.util.Optional;
 @RestController
 public class ArticleController {
     @Autowired
-    private ArticleService articleService;
-
+    private  ArticleService articleService;
     @GetMapping("/get/{id}")
-    private Article findById(@PathVariable("id") int article_id) {
+    @Cacheable(cacheNames = "article")
+    public Article findById(@PathVariable("id") int article_id) {
         Article article = articleService.findById(article_id);
         return article;
     }
