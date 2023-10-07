@@ -1,19 +1,17 @@
-package cn.lzy.service;
+package cn.lzy.JpaCache;
 
 import cn.lzy.mybatiscatalog.domainjpa.Article;
-import cn.lzy.mybatiscatalog.domainjpa.ArticleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Optional;
-
 /**
  * @author:韦盛彪
  * @creat: 2023-09-25  17:01
  */
+/*
 @RestController
 public class ArticleController {
     @Autowired
@@ -26,3 +24,4 @@ public class ArticleController {
     }
 
 }
+*/

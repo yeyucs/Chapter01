@@ -1,4 +1,4 @@
-package cn.lzy.service;
+package cn.lzy.JpaCache;
 
 import cn.lzy.mybatiscatalog.domainjpa.Article;
 import cn.lzy.mybatiscatalog.domainjpa.ArticleRepository;
@@ -13,7 +13,7 @@ import java.util.Optional;
  * @creat: 2023-09-25  16:36
  **/
 
-@Service
+/*@Service
 public class ArticleService {
     @Autowired
     private ArticleRepository articleRepository;
@@ -25,11 +25,11 @@ public class ArticleService {
         }
         return null;
     }
-   /* public Article updateArticle(Article article){
+   *//* public Article updateArticle(Article article){
         articleRepository.updateArticle(article.getContent(),article.getId());
         return article;
     }
     public void deleteArticle(int article_id){
         articleRepository.deleteById(article_id);
-    }*/
-}
+    }*//*
+}*/
