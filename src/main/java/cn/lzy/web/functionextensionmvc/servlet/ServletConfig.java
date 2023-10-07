@@ -19,7 +19,7 @@ public class ServletConfig {
     @Bean
     public FilterRegistrationBean getFilter(MyFilter filter) {
         FilterRegistrationBean registrationBean = new FilterRegistrationBean(filter);
-        registrationBean.setUrlPatterns(Arrays.asList("/toLoginPage","/myFilter"));
+        registrationBean.setUrlPatterns(Arrays.asList("/myYuyu","/myFilter"));
         return registrationBean;
     }
     @Bean
