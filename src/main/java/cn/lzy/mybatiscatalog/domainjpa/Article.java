@@ -1,13 +1,14 @@
 package cn.lzy.mybatiscatalog.domainjpa;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * @author:韦盛彪
  * @creat: 2023-09-25  16:13
  */
 @Entity(name = "t_article")
-public class Article {
+public class Article implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

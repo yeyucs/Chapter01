@@ -1,9 +1,10 @@
 package cn.lzy.mybatiscatalog.jpa;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity(name = "t_comment")
-public class Discuss {
+public class Discuss implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
