@@ -17,7 +17,7 @@ import java.util.Optional;
  * @creat: 2023-09-26  10:58
  */
 @RestController
-public class JpaController {
+public class RedisController {
 
 
         @Autowired
