@@ -1,4 +1,4 @@
-package cn.lzy.JpaCache;
+package cn.lzy.Cache.RedisCache;
 
 import cn.lzy.mybatiscatalog.jpa.Discuss;
 import cn.lzy.mybatiscatalog.jpa.DiscussRepository;
