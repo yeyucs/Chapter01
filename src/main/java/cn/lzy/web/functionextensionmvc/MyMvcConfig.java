@@ -14,6 +14,7 @@ public class MyMvcConfig implements WebMvcConfigurer {
         registry.addViewController("/toLoginPage").setViewName("login");
         registry.addViewController("/toLoginPage1").setViewName("login");
         registry.addViewController("/login.html").setViewName("login");
+        /*registry.addViewController("/**").setViewName("login");*/
     }
     @Autowired
     private MyInterceptor myInterceptor;
@@ -22,8 +23,8 @@ public class MyMvcConfig implements WebMvcConfigurer {
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(myInterceptor)
                 .addPathPatterns("/**")
-                .excludePathPatterns("/login.html/**")
-                .excludePathPatterns("/toLoginPage1");
+                .excludePathPatterns("/toLoginPage1")
+                .excludePathPatterns("/toLoginPage");
     }
 }
 

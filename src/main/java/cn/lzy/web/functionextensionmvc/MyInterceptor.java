@@ -17,7 +17,8 @@ public class MyInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response,Object handler) throws Exception{
         String uri = request.getRequestURI();
         Object loginUser = request.getSession().getAttribute("loginUser");
-        if (uri.startsWith("/admin") && null == loginUser) {
+//        uri.startsWith("/admin")
+        if (uri==uri && null == loginUser) {
             response.sendRedirect("/toLoginPage");
             return false;
         }
@@ -32,6 +33,7 @@ public class MyInterceptor implements HandlerInterceptor {
     }
 
 }
+
 
 
 
