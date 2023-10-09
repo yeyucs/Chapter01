@@ -18,7 +18,7 @@ public class MyInterceptor implements HandlerInterceptor {
         String uri = request.getRequestURI();
         Object loginUser = request.getSession().getAttribute("loginUser");
 //        uri.startsWith("/admin")
-        if (uri==uri && null == loginUser) {
+        if (uri.startsWith("/admin") && null == loginUser) {
             response.sendRedirect("/toLoginPage");
             return false;
         }
