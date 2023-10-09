@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity(name = "t_comment")
-public class Discuss implements Serializable {
+public class Discuss {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
