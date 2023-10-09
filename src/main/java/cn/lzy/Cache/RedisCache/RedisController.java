@@ -22,7 +22,7 @@ public class RedisController {
 
         @Autowired
         private DiscussRepository repository;
-
+        @GetMapping("/get1/{id}")
         @Cacheable(cacheNames = "discuss",unless = "#result==null")
         public Discuss findById(@PathVariable("id") int comment_id) {
             Optional<Discuss> discuss = repository.findById(comment_id);
