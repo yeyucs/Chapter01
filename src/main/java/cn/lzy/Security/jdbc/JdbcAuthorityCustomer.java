@@ -12,7 +12,7 @@ import javax.sql.DataSource;
  * @author:韦盛彪
  * @creat: 2023-10-10  10:41
  */
-@EnableWebSecurity
+/*@EnableWebSecurity
 public class JdbcAuthorityCustomer extends WebSecurityConfigurerAdapter {
     @Autowired
     private DataSource dataSource;
@@ -26,7 +26,7 @@ public class JdbcAuthorityCustomer extends WebSecurityConfigurerAdapter {
                 .usersByUsernameQuery(userSQL)
                 .authoritiesByUsernameQuery(authoritySQL);
     }
-}
+}*/
 
 
 
