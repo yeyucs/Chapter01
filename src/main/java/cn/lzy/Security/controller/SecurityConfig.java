@@ -1,4 +1,4 @@
-package cn.lzy.web.controller;
+package cn.lzy.Security.controller;
 
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
