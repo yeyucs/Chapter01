@@ -9,7 +9,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
  * @author:韦盛彪
  * @creat: 2023-10-09  17:09
  */
-@EnableWebSecurity
+/*@EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
@@ -21,4 +21,4 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .withUser("李四").password(encoder.encode("123456")).roles("vip");
     }
-}
+}*/
