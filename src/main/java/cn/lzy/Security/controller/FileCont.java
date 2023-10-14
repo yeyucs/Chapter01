@@ -16,4 +16,8 @@ public class FileCont {
                            @PathVariable("path")String path) {
         return "detail/"+type+"/"+path;
     }
+    @GetMapping("/userLogin")
+    public String toLoginPage() {
+        return "login";
+    }
 }
