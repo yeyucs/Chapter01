@@ -1,11 +1,15 @@
 package cn.lzy.Security.Redis;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
+
+import javax.sql.DataSource;
 
 /**
  * @author:韦盛彪
@@ -16,6 +20,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 public class RedisSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private UserDetailsServiceImpl userDetailsService;
+
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 
@@ -23,6 +28,8 @@ public class RedisSecurityConfig extends WebSecurityConfigurerAdapter {
 
         auth.userDetailsService(userDetailsService).passwordEncoder(encoder);
     }
+    @Autowired
+    private DataSource dataSource;
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
@@ -42,7 +49,18 @@ public class RedisSecurityConfig extends WebSecurityConfigurerAdapter {
         http.logout()
                 .logoutUrl("/mylogout")
                 .logoutSuccessUrl("/");
+        //定制Remember-me记住我功能
+        http.rememberMe()
+                .rememberMeParameter("remember-me")
+                .tokenValiditySeconds(20)
+                //对Cookie信息进行持久化管理
+                .tokenRepository(tokenRepository());
     }
-
-
+    //持久化Token储存
+    @Bean
+    public JdbcTokenRepositoryImpl tokenRepository() {
+        JdbcTokenRepositoryImpl jr=new JdbcTokenRepositoryImpl();
+        jr.setDataSource(dataSource);
+        return jr;
+    }
 }
