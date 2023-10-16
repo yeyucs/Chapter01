@@ -9,23 +9,26 @@
 </head>
 <body class="text-center">
 <!--  用户登录form表单 -->
-    <form class="form-signin" th:action="@{/userLogin}" th:method="post">
+    <form class="form-signin" th:action="@{/userLogin}" th:method="post" method="post">
+        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
     <img class="mb-4" th:src="@{/login/img/login.jpg}" width="72" height="72">
     <h1 class="h3 mb-3 font-weight-normal" th:text="#{login.tip}">请登录</h1>
     <!--    用户登录错误信息提示框-->
     <div th:if="${param.error}"
          style="color: red;height: 40px;text-align: left;font-size: 1.1em">
-        <img th:src="@{/login/img/1635559140289.png}" width="20px">用户名或者密码错误，请重新登录！
+        <img th:src="@{/login/img/1635559140289.png}" width="15px">用户名或者密码错误，请重新登录！
     </div>
+
         <input type="text" name="name" class="form-control"
                th:placeholder="#{login.username}" required="" autofocus="">
         <input type="password" name="pwd" class="form-control"
                th:placeholder="#{login.password}" required="">
-    <div class="checkbox mb-3">
-        <label>
-            <input type="checkbox" name="remember-me" > [[#{login.rememberme}]]
-        </label>
-    </div>
+
+<!--    <div class="checkbox mb-3">-->
+<!--        <label>-->
+<!--            <input type="checkbox" name="remember-me" > [[#{login.rememberme}]]-->
+<!--        </label>-->
+<!--    </div>-->
     <button class="btn btn-lg btn-primary btn-block" type="submit" th:text="#{login.button}">登录</button>
         <script>
             Date.prototype.format = function (fmt) {
@@ -35,16 +38,17 @@
                     "d+": this.getDate(), //日
                     "h+": this.getHours(), //小时
                     "m+": this.getMinutes(), //分
-                    "s+": this.getSeconds() //秒
+                    // "s+": this.getSeconds() //秒
                 };
                 if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
                 for (var k in o)
                     if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
                 return fmt;
             }
-            setInterval("document.getElementById('dateTime').innerHTML = (new Date()).format('yyyy-MM-dd hh:mm:ss');", 1000);
+            setInterval("document.getElementById('dateTime').innerHTML = (new Date()).format('yyyy-MM-dd hh:mm');", 1000);
         </script>
         <div id="dateTime"></div>
+
     <a class="btn btn-sm" th:href="@{/toLoginPage(l='zh_CN')}">中文</a>
     <a class="btn btn-sm" th:href="@{/toLoginPage(l='en_US')}">English</a>
 </form>
