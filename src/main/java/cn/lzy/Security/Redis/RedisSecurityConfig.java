@@ -7,6 +7,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
 
 import javax.sql.DataSource;
@@ -32,11 +33,13 @@ public class RedisSecurityConfig extends WebSecurityConfigurerAdapter {
     private DataSource dataSource;
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        //可以关闭Spring Security默认开启的CSRF防护功能
+//        http.csrf().disable();
         http.authorizeRequests()
                 .antMatchers("/").permitAll()
                 //需要对static文件夹下静态资源进行统一放行
                 .antMatchers("/login/**").permitAll()
-                .antMatchers("/detail/common/**").hasAnyRole("vip","common")
+                .antMatchers("/detail/common/**").hasAnyRole("common")
                 .antMatchers("/detail/vip/**").hasRole("vip")
                 .anyRequest().authenticated();
         //自定义用户登录控制
@@ -63,4 +66,11 @@ public class RedisSecurityConfig extends WebSecurityConfigurerAdapter {
         jr.setDataSource(dataSource);
         return jr;
     }
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+
+
+
 }
