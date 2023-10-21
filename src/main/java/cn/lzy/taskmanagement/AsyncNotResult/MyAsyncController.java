@@ -1,10 +1,11 @@
-package cn.lzy.MyAsyncWeb;
+package cn.lzy.taskmanagement.AsyncNotResult;
 
+import cn.lzy.utils.DataUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.thymeleaf.util.DateUtils;
 
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.Future;
@@ -28,9 +29,7 @@ public class MyAsyncController {
 
         /*Long startTime = System.currentTimeMillis();*/
         int to = futureA.get() + futureB.get();
-        SimpleDateFormat formatter= new SimpleDateFormat("yyyy-MM-dd HH:mm:ss ");
-        Date date = new Date(System.currentTimeMillis());
-        System.out.println("异步任务数据统计汇总结果:" + to +"====="+formatter.format(date));
+        System.out.println("异步任务数据统计汇总结果:" + to +"====="+ DataUtils.getData(DataUtils.data1));
         Long endTime = System.currentTimeMillis();
         System.out.println("异步主流程耗时:"+(endTime - startTimeA));
 
