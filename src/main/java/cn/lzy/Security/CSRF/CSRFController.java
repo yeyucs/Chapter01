@@ -1,3 +1,4 @@
+/*
 package cn.lzy.Security.CSRF;
 
 import cn.lzy.Security.Redis.Customer;
@@ -16,10 +17,12 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Optional;
 
+*/
 /**
  * @author:韦盛彪
  * @creat: 2023-10-15  20:31
- */
+ *//*
+
 @Controller
 public class CSRFController {
 
@@ -57,3 +60,4 @@ public class CSRFController {
     }
 
 }
+*/

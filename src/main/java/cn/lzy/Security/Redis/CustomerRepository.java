@@ -1,16 +1,19 @@
+/*
 package cn.lzy.Security.Redis;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
+//import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 import javax.transaction.Transactional;
 
+*/
 /**
  * @author:韦盛彪
  * @creat: 2023-10-09  17:52
- */
+ *//*
+
 public interface CustomerRepository extends JpaRepository<Customer,Integer> {
     Customer findByUsername(String username);
 
@@ -28,3 +31,4 @@ public interface CustomerRepository extends JpaRepository<Customer,Integer> {
 
 
 }
+*/

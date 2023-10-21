@@ -1,3 +1,4 @@
+/*
 package cn.lzy.Security.controller;
 
 import cn.lzy.Security.Redis.RedisSecurityConfig;
@@ -13,10 +14,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.Enumeration;
 
+*/
 /**
  * @author:韦盛彪
  * @creat: 2023-10-09  10:51
  */
+/*
+
 @Controller
 public class FileCont {
     //影片详情页
@@ -79,3 +83,4 @@ public class FileCont {
 
     }
 }
+*/

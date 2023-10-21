@@ -1,3 +1,4 @@
+<!--
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -8,12 +9,12 @@
     <link th:href="@{/login/css/signin.css}" rel="stylesheet">
 </head>
 <body class="text-center">
-<!--  用户登录form表单 -->
+&lt;!&ndash;  用户登录form表单 &ndash;&gt;
     <form class="form-signin" th:action="@{/userLogin}" th:method="post" method="post">
         <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
     <img class="mb-4" th:src="@{/login/img/login.jpg}" width="72" height="72">
     <h1 class="h3 mb-3 font-weight-normal" th:text="#{login.tip}">请登录</h1>
-    <!--    用户登录错误信息提示框-->
+    &lt;!&ndash;    用户登录错误信息提示框&ndash;&gt;
     <div th:if="${param.error}"
          style="color: red;height: 40px;text-align: left;font-size: 1.1em">
         <img th:src="@{/login/img/1635559140289.png}" width="15px">用户名或者密码错误，请重新登录！
@@ -54,3 +55,4 @@
 </form>
 </body>
 </html>
+-->

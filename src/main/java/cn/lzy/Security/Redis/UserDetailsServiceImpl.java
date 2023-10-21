@@ -1,3 +1,4 @@
+/*
 package cn.lzy.Security.Redis;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,10 +13,12 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.stream.Collectors;
 
+*/
 /**
  * @author:韦盛彪
  * @creat: 2023-10-10  13:16
- */
+ *//*
+
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
     @Autowired
@@ -30,11 +33,13 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         //对用户权限进行封装
         List<SimpleGrantedAuthority> list = authorities.stream().map(authority -> new SimpleGrantedAuthority(authority.getAuthority()))
                 .collect(Collectors.toList());
-       /* System.out.println("登录的用户名:"+username);
+       */
+/* System.out.println("登录的用户名:"+username);
         String password = customer.getPassword();
         String encode = passwordEncoder.encode(password);
         System.out.println("登录的密码:"+password);
-        System.out.println("加密"+encode)*/;
+        System.out.println("加密"+encode)*//*
+;
         //返回封装的UserDetails用户详情类
         if (customer != null){
             UserDetails userDetails = new User(customer.getUsername(),customer.getPassword(),list);
@@ -49,3 +54,4 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     }
 }
+*/

@@ -1,3 +1,4 @@
+/*
 package cn.lzy.Security.Redis;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,10 +13,12 @@ import org.springframework.security.web.authentication.rememberme.JdbcTokenRepos
 
 import javax.sql.DataSource;
 
+*/
 /**
  * @author:韦盛彪
  * @creat: 2023-10-10  00:10
- */
+ *//*
+
 
 @EnableWebSecurity
 public class RedisSecurityConfig extends WebSecurityConfigurerAdapter {
@@ -74,3 +77,4 @@ public class RedisSecurityConfig extends WebSecurityConfigurerAdapter {
 
 
 }
+*/

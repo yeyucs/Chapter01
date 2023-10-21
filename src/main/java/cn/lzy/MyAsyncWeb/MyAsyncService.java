@@ -4,6 +4,8 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.AsyncResult;
 import org.springframework.stereotype.Service;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.concurrent.Future;
 
 /**
@@ -12,11 +14,13 @@ import java.util.concurrent.Future;
  */
 @Service
 public class MyAsyncService {
+    SimpleDateFormat formatter= new SimpleDateFormat("yyyy-MM-dd HH:mm:ss ");
+    Date date = new Date(System.currentTimeMillis());
     @Async
     public Future<Integer> processA() throws Exception {
-        System.out.println("开始计算从1-1000值的总和");
+        System.out.println("开始计算从1-1000值的总和=====" + formatter.format(date));
         Long startTimeA = System.currentTimeMillis();
-        Thread.sleep(5000);
+        Thread.sleep(4000);
         int total=0;
         for (int i = 0;i <= 1000;i++){
             total=total+i;
@@ -28,7 +32,7 @@ public class MyAsyncService {
     }
     @Async
     public Future<Integer> processB() throws Exception {
-        System.out.println("开始计算从1000-2000值的总和");
+        System.out.println("开始计算从1000-2000值的总和====="+ formatter.format(date));
         Long startTimeB = System.currentTimeMillis();
         Thread.sleep(5000);
         int total1=1000;
