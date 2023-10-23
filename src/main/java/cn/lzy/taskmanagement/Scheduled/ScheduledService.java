@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class ScheduledService {
 
-    @Scheduled(fixedRate = 10*1000)
+   /* @Scheduled(fixedRate = 10*1000)
     public void scheduledServiceRate1() throws  InterruptedException {
         System.out.println("scheduledServiceRate1====="+ DataUtils.getData(DataUtils.data1));
         Thread.sleep(5*1000);
@@ -41,7 +41,7 @@ public class ScheduledService {
     public void scheduledServiceinitialDelay2() throws  InterruptedException {
         System.out.println("scheduledServiceinitialDelay2====="+ DataUtils.getData(DataUtils.data1));
         Thread.sleep(5*1000);
-    }
+    }*/
 }
 
 
