@@ -8,9 +8,11 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.ImportResource;
 import org.springframework.scheduling.annotation.EnableAsync;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 @EnableAsync
 @EnableCaching
+@EnableScheduling
 @ServletComponentScan
 @SpringBootApplication
 @ImportResource("classpath:xmlproperties.xml")
