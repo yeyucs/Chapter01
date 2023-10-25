@@ -26,11 +26,11 @@ public class ScheduledService {
         System.out.println("scheduledServiceDelay1=====" + DataUtils.getData(DataUtils.data1));
         Thread.sleep(5*1000);
     }*/
-    @Scheduled(fixedDelay = 1)
+   /* @Scheduled(fixedDelay = 1)
     public void scheduledServiceDelay2() throws InterruptedException {
         System.out.println("scheduledServiceDelay2=====" + DataUtils.getData(DataUtils.data1));
         Thread.sleep(5000);
-    }
+    }*/
 
     /*@Scheduled(initialDelay =10*1000 ,fixedRate = 10*1000)
     public void scheduledServiceinitialDelay1() throws  InterruptedException {
